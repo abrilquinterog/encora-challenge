@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap');
+
+.aside {
+    width: 20%;
+    height: 95%;
+    position: fixed;
+    background: rgba(231, 221, 240, 0.4);
+    border-radius: 0px 0px 100px 0px;
+}
+
+.logo {
+    position: relative;
+    top: 6%;
+    left: 12%;
+}
+
+.container {
+    display: flex;
+    padding: 24px;
+    align-items: flex-start;
+    font-family: Arial, Helvetica, sans-serif;
+    flex-direction: column;
+    position: relative;
+    top: 7%;
+    left: 5%;
+}
+
+.step {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 1rem;
+    line-height: 164%;
+}
+
+.number {
+    width: 32px;
+    border: none;
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    height: 32px;
+    margin: 0px;
+    display: flex;
+    padding: 0px;
+    font-size: 1em;
+    align-items: center;
+    border-radius: 50%;
+    justify-content: center;
+    background-color: #FFF;
+}
+
+.img {
+    justify-self: end;
+    align-self: flex-end;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    border-radius: 0px 0px 100px 0px;
+}
