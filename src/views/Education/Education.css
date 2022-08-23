@@ -1,0 +1,105 @@
+.ed-section {
+	position: absolute;
+	width: 71.25em;
+	height: 64em;
+	left: 18.75em;
+	top: 0em;
+	background-color: #FFFFFF;
+}
+
+.step {
+	font-family: 'IBM Plex Sans';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 1.5em;
+	color: #44197E;
+	margin-bottom: 0%;
+}
+
+.title {
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 48px;
+	line-height: 52px;
+	color: #44197E;
+	margin: 0%;
+}
+
+.fields {
+	width: 109px;
+	height: 21px;
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 21px;
+/* identical to box height, or 150% */
+	letter-spacing: 0.08em;
+	color: #262429;
+}
+
+.box-input {
+	width: 25.625em;
+	height: 30px;
+	border-radius: 25px;
+	border-style: ridge;
+	border-color: #BEBBC4;
+	padding-left: 10px; 
+}
+
+::placeholder {
+	width: 410px;
+	height: 20px;
+	letter-spacing: 0em;
+	text-align: left;
+	font-family: 'IBM Plex Sans';
+	font-style: normal;
+	font-weight: 400;
+font-size: 14px;
+line-height: 20px;
+color: #BEBBC4;
+}
+
+.buttons {
+	width: 15em;
+height: 2em;
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 24px;
+display: flex;
+align-items: center;
+text-align: center;
+letter-spacing: 0.016em;
+text-transform: uppercase;
+color: #262429;
+/* Inside auto layout */
+
+flex: none;
+order: 1;
+flex-grow: 0;
+}
+
+.add-school {
+	width: 120px;
+height: 30px;
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 600;
+font-size: 14px;
+line-height: 20px;
+/* identical to box height, or 143% */
+
+display: flex;
+align-items: center;
+text-align: center;
+letter-spacing: 0.014em;
+text-transform: uppercase;
+color: #44197E;
+}
+
+.btns-section {
+	flex-direction: row;
+}
