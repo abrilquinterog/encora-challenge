@@ -1,5 +1,6 @@
 import logo from '../../assets/encora-jobs-logo 2.png';
 import landing from '../../assets/Landing-Illustration.gif';
+import styles from './home.module.css';
 import { useNavigate } from "react-router-dom";
 
 export const Home = () => {
@@ -10,12 +11,12 @@ export const Home = () => {
     }
 
   return (
-    <main>
-    <aside>
-      <img src={logo} alt='encora jobs logo'/>
-      <img src={landing} alt=''/>
+    <main className={styles.main}>
+    <aside className={styles.aside}>
+      <img className={styles.logo}src={logo} alt='encora jobs logo'/>
+      <img src={landing} alt='' className={styles.img}/>
     </aside>
-    <section>
+    <section className={styles.section}>
       <h1>Build your Resume</h1>
       <p>Create your own Encora resume and join the team</p>
       <button onClick={handleOnClick}>START NOW!</button>
