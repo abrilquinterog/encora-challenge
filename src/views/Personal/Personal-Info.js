@@ -6,6 +6,7 @@ export const Personal = () => {
   return (
     <main>
     <Aside />
+    
     <Footer />
     </main>
   );

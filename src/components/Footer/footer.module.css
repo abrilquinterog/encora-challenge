@@ -25,7 +25,7 @@
     color: #FFFFFF;
 }
 
-.options:hover {
+.options:focus {
     color: #D9D9D9;
     box-shadow: 0px -2px 9px rgba(0, 0, 0, 0.1);
     cursor: pointer;
