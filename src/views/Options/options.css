@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat';
+    box-sizing: border-box;
+}
+
+.main {
+    display: flex;
+    flex-direction: row-reverse;
+    height: 100vh;
+    width: 100%;
+}
+
+.content-section {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 60%;
+    margin-right: 15%;
+}
+
+.title-container {
+    display: flex;
+    margin-top: 25px;
+    height: 20%;
+    color: #44197E;
+    font-size: 24px;
+    /* border: green solid 1px; */
+}
+
+.cards-container {
+    display: flex;
+    flex-direction: row;
+    height: 60%;
+    /* border: red solid 1px; */
+}
+
+.cards {
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    width: 37%;
+    height: 90%;
+    cursor: pointer;
+    color: #585360;
+    font-size: 48px;
+    font-weight: 700;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: none;
+    background-color: #F1EFEF;
+    border-radius: 60px;
+    /* border: purple solid 1px; */
+}
+
+.cards:focus {
+    background-color: rgba(64, 193, 239, 0.2);
+    color: #40C1EF;
+}
+
+.buttons-container {
+    display: flex;
+    flex-direction: row;
+    height: 10%;
+    padding: 50px;
+    justify-content: space-between;
+    /* border: blue solid 1px; */
+}
+
+.back-button {
+    display: flex;
+    cursor: pointer;
+    color: black;
+    background-color: white;
+    border: none;
+    border-radius: 32px;
+}
+
+.next-button {
+    display: flex;
+    cursor: pointer;
+    border: black solid;
+    border-radius: 32px;
+}
