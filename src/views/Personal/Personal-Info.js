@@ -1,10 +1,10 @@
-import { Aside } from "../../components/Aside";
-
+// import { Aside } from "../../components/Aside";
 
 export const Personal = () => {
   return (
     <main>
-    <Aside />
+    {/* <Aside /> */}
+
     </main>
   );
 };
