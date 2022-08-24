@@ -1,8 +1,32 @@
 import { Aside } from "../../components/Aside/Aside";
 import { Footer } from "../../components/Footer/Footer";
 import styles from "./personal-info.module.css";
+import { useNavigate } from "react-router-dom";
+import { countries } from "./countries.js";
+import { useState } from "react";
 
 export const Personal = () => {
+  const navigate = useNavigate();
+  const [personalInfo, setPersonalInfo] = useState({
+    firstName: "",
+    lastName: "",
+    country: "",
+    job: "",
+    summary: "",
+    email: "",
+    phone: 0,
+  });
+
+  const handleOnSubmit = () => {
+    navigate("/options");
+    console.log(personalInfo);
+  };
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setPersonalInfo({ ...personalInfo, [name]: value });
+  };
+
   return (
     <main className={styles.main}>
       <Aside />
@@ -16,9 +40,12 @@ export const Personal = () => {
           <label className={styles.label}>
             First Name <br />
             <input
+            name="firstName"
               type="text"
               placeholder="Name"
-              className={styles.inputText}
+              className={styles.input}
+              required
+              onChange={handleInputChange}
             />
           </label>
 
@@ -27,19 +54,35 @@ export const Personal = () => {
             <br />
             <input
               type="text"
+              name="lastName"
               placeholder="Last name"
-              className={styles.inputText}
+              className={styles.input}
+              onChange={handleInputChange}
+              required
             />
           </label>
           <br />
+
+          <label>
+            Country
+            <br />
+            <select name="country" className={styles.input} onChange={handleInputChange}>
+              {countries.map((country) => {
+                return <option key={country} value={country}>{country}</option>;
+              })}
+            </select>
+          </label>
 
           <label className={styles.label}>
             Job Title
             <br />
             <input
               type="text"
+              name="job"
               placeholder="e.g. Software Developer"
-              className={styles.inputText}
+              className={styles.input}
+              onChange={handleInputChange}
+              required
             />
           </label>
           <br />
@@ -49,7 +92,10 @@ export const Personal = () => {
             <br />
             <textarea
               placeholder="Type project's description..."
+              name="summary"
               className={styles.textarea}
+              onChange={handleInputChange}
+              required
             />
           </label>
           <br />
@@ -60,8 +106,11 @@ export const Personal = () => {
             Email
             <input
               type="email"
-              placeholder="Name"
-              className={styles.inputText}
+              name="email"
+              placeholder="email"
+              className={styles.input}
+              onChange={handleInputChange}
+              required
             />
           </label>
 
@@ -69,14 +118,19 @@ export const Personal = () => {
             Phone number (Optional)
             <input
               type="number"
+              name="phone"
               placeholder="Name"
-              className={styles.inputText}
+              className={styles.input}
+              onChange={handleInputChange}
+              required
+              pattern="/ [2-9] {2}\d {8} /"
             />
           </label>
         </form>
         <article className={styles.btnContainer}>
-          <button className={styles.btn}>BACK</button>
-          <button className={styles.btn}>NEXT</button>
+          <button className={styles.btn} onClick={handleOnSubmit}>
+            NEXT
+          </button>
         </article>
       </section>
       <Footer />

@@ -50,7 +50,7 @@ export const WorkExperience = () => {
                 {technologies.map(technology=>{
                     return(
                         <label className={module.techBtn}>
-                        <input type="checkbox"/><span>{technology}</span>
+                        <input type="checkbox" key={technology}/><span>{technology}</span>
                         </label>
                         )
                 })}

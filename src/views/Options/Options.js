@@ -6,6 +6,8 @@ import img1 from '../../assets/Money Illustration.png'
 import img2 from '../../assets/Write Illustration.png'
 import gif1 from '../../assets/Personal-Project.gif'
 import gif2 from '../../assets/Work-Experience.gif'
+import { Aside } from '../../components/Aside/Aside';
+import { Footer } from '../../components/Footer/Footer';
 
 const Options = () => {
     const [selected,setSelected] = useState(null)
@@ -21,7 +23,7 @@ const Options = () => {
 
   return (
     <main className="main">
-    {/* <Aside /> */}
+    <Aside />
 
     <section className="content-section">
         <container className="title-container">
@@ -52,7 +54,7 @@ const Options = () => {
         </container>
     </section>
 
-    {/* FOOTER */}
+    <Footer />
     </main>
   )
 }
