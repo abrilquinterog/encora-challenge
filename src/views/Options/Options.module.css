@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -6,14 +8,14 @@
     box-sizing: border-box;
 }
 
-.main {
+.optionsMain {
     display: flex;
     flex-direction: row-reverse;
     height: 100vh;
     width: 100%;
 }
 
-.content-section {
+.contentSection {
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -21,7 +23,7 @@
     margin-right: 15%;
 }
 
-.title-container {
+.titleContainer {
     display: flex;
     margin-top: 25px;
     height: 20%;
@@ -30,9 +32,10 @@
     /* border: green solid 1px; */
 }
 
-.cards-container {
+.cardsContainer {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     height: 60%;
     /* border: red solid 1px; */
 }
@@ -40,10 +43,12 @@
 .cards {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     margin: auto;
-    width: 37%;
-    height: 90%;
     cursor: pointer;
+    width: 475px;
+    height: 586px;
+    left: 582px;
     color: #585360;
     font-size: 48px;
     font-weight: 700;
@@ -57,11 +62,24 @@
 }
 
 .cards:focus {
+    box-shadow: 0px 4px 14px rgba(32, 96, 119, 0.25);
     background-color: rgba(64, 193, 239, 0.2);
     color: #40C1EF;
 }
 
-.buttons-container {
+.projectsImage, .workImage,
+.projectsGif, .workGif {
+    /* position: absolute; */
+    width: 309.47px;
+    height: 243.29px;
+    left: 179.33px;
+    top: 374.29px;
+    border-radius: 0px 0px 60px 0px;
+}
+
+
+
+.buttonsContainer {
     display: flex;
     flex-direction: row;
     height: 10%;
@@ -70,7 +88,7 @@
     /* border: blue solid 1px; */
 }
 
-.back-button {
+.backButton {
     display: flex;
     cursor: pointer;
     color: black;
@@ -79,7 +97,7 @@
     border-radius: 32px;
 }
 
-.next-button {
+.nextButton {
     display: flex;
     cursor: pointer;
     border: black solid;
