@@ -1,16 +1,27 @@
-import { Aside } from "../../components/Aside";
+import { Aside } from "../../components/Aside/Aside";
 import { useState } from "react";
 import { Footer } from "../../components/Footer/Footer";
+import { useNavigate } from "react-router-dom";
+
 
 
 export const PersonalProjects = () => {
+    const navigate = useNavigate();
+
+    const handleOnClickBack = () => {
+        navigate('/options')};
+    
+    const handleOnClickNext = () => {
+        navigate('/education')};  
     
     const [technologies,setTechnologies]=useState(["JAVASCRIPT", "C++", "PYTHON", "HTML", "RUBY", 
     "SQL", "C#", "REACT JS", "NODE JS", "ANGULAR JS", "LAMP", "MEAN", "MEVN"]);
 
   return (
     <main className="main-work">
+    <section> 
     <Aside />
+    </section>
     <section>
         <h2 className="second-step">Step 2</h2>
         <h2 className="work-tittle">Personal Projects</h2>
@@ -53,8 +64,8 @@ export const PersonalProjects = () => {
         </form>
 
         <div className="nav-container">
-        <button className="btn-nav">BACK</button>
-        <button className="btn-nav">NEXT</button>
+        <button className="btn-nav" onClick={handleOnClickBack}>BACK</button>
+        <button className="btn-nav" onClick={handleOnClickNext}>NEXT</button>
         </div>
     </section>
    <Footer />
