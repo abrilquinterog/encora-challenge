@@ -1,6 +1,8 @@
 import { Aside } from "../../components/Aside/Aside";
 import { useState } from "react";
+import { Footer } from "../../components/Footer/Footer";
 import { useNavigate } from "react-router-dom";
+
 
 
 export const PersonalProjects = () => {
@@ -22,7 +24,7 @@ export const PersonalProjects = () => {
     </section>
     <section>
         <h2 className="second-step">Step 2</h2>
-        <h2 className="work-tittle">PersonalProjects</h2>
+        <h2 className="work-tittle">Personal Projects</h2>
         <button className="tips"><i></i>TIPS</button>
         <form>
             <label>Project Tittle <br/>
@@ -66,7 +68,7 @@ export const PersonalProjects = () => {
         <button className="btn-nav" onClick={handleOnClickNext}>NEXT</button>
         </div>
     </section>
-   
+   <Footer />
     </main>
   );
 };

@@ -1,7 +1,10 @@
 import { Aside } from "../../components/Aside/Aside";
 import { useState } from "react";
+import { Footer } from "../../components/Footer/Footer";
+//import { useNavigate } from "react-router-dom";
 import module from './Work-experience.module.css';
 import { useNavigate } from "react-router-dom";
+
 
 
 export const WorkExperience = () => {
@@ -65,7 +68,7 @@ export const WorkExperience = () => {
         <button className={module.btnNav} onClick={handleOnClickNext}>NEXT</button>
         </div>
     </section>
-   
+   <Footer />
     </main>
   );
 };

@@ -12,12 +12,15 @@
 
 .menu {
     display: flex;
+    gap: 2rem;
     flex-direction: row;
     position: relative;
     right: 5%;
     justify-content: flex-end;
     align-items: center;
-    gap: 2rem;
+}
+
+.options {
     font-family: 'IBM Plex Sans';
     font-weight: lighter;
     font-size: 14px;
