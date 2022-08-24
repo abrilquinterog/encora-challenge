@@ -6,13 +6,15 @@
     margin:0;
     box-sizing: border-box;
 }
-.form-container{
+.formContainer{
     padding: 40px 290px 0px 82px;
     max-width: 1140px;
     display: flex;
     flex-direction: column;
+    position: absolute;
+    left: 300px;
 }
-.main-work{
+.mainWork{
     display: flex;
     flex-direction: row;
 }
@@ -29,8 +31,11 @@
     font-size: 14px;
     color: #262429
 }
-
-.second-step{
+.tips:hover{
+    background-color: #45197e56;
+    border: #45197e56 ;
+}
+.secondStep{
     font-family: 'IBM Plex Sans';
     font-style: normal;
     font-weight: 400;
@@ -38,17 +43,17 @@
     line-height: 36px;
     font-family: 'IBM Plex Sans';
     color: #44197E;
-    margin:2px 0px;
-    padding: 0;
+    margin:0px;
 }
-.work-tittle{
+.workExpTittle{
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 700;
     font-size: 48px;
     line-height: 52px;
     color: #44197E;
-    margin:10px 0px;
+    margin-top: -8px;
+    /*border: solid red;*/
 }
 label{
     font-family: 'Montserrat';
@@ -58,7 +63,7 @@ font-size: 14px;
 line-height: 21px;
 letter-spacing: 0.08em;
 color: #262429;
-margin:4px;
+margin-top:10px;
 }
 
 input[type=text]{
@@ -75,7 +80,7 @@ input[type=text]{
     line-height: 20px;
     color: #BEBBC4;
 }
-.checkbox-tech{
+.checkboxTech{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -91,7 +96,7 @@ input[type=text]{
     color: #BEBBC4;
 }
 
-.tech-btn{
+.techBtn{
 width: fit-content;
 height: 48px;
 background: #D8D6DB;
@@ -104,7 +109,7 @@ font-weight: 600;
 font-size: 12px;
 }
 
-.form-textarea{
+.formTextarea{
 width: 100%;
 height: 142px;
 border: 1px solid #BEBBC4;
@@ -113,7 +118,7 @@ text-align: start;
 padding: 16px;
 }
 
-.btn-nav{
+.btnNav{
 Width:123px;
 Height:48px;
 padding: 12px 24px;
@@ -122,12 +127,62 @@ border: 1px solid #585360;
 border-radius: 32px;
 background: none;
 }
+.btnNav:hover{
+    background-color: #2D1154;
+    color: white;
+}
+.btnNav:focus{
+    background-color: #2D1154;
+    color: white;
+}
 
-.nav-container{
+.navContainer{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     position: sticky;
     bottom: 0;
     background-color: white;
+    padding-right: 80px;
+    width: 1140px;
 }
+
+.asideContainer{
+    width: 300px;
+}
+
+.addBtn{
+    width: 205px;
+    height: 40px;
+    border-radius: 20px;
+    border-color: transparent;
+    background-color: transparent;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    color: #44197E;
+}
+.addBtn:hover{
+    background-color: #45197e56;
+}
+/*
+input.checkboxTech {
+    display: none;
+  }
+  input.checkboxTech + label {
+    border: 1px solid grey;
+    background: ghoswhite;
+    padding: 5px 8px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  input.checkboxTech:not(:checked) + label:hover {
+    box-shadow: 0px 1px 3px;
+  }
+  input.checkboxTech + label:active,
+  input.checkboxTech:checked + label {
+    box-shadow: 0px 0px 3px inset;
+    background: #eee;
+  }*/
