@@ -131,7 +131,7 @@ export const Personal = () => {
           </label>
         </form>
         <article className={styles.btnContainer}>
-          <button className={styles.btn} onClick={handleOnSubmit}>
+          <button type="submit" className={styles.btn} onClick={handleOnSubmit}>
             NEXT
           </button>
         </article>

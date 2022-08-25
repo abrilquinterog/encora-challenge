@@ -163,12 +163,8 @@ export const PersonalProjects = () => {
         </form>
 
         <div className={module.navContainer}>
-          <button className={module.btnNav} onClick={handleOnClickBack}>
-            BACK
-          </button>
-          <button className={module.btnNav} onClick={handleOnClickNext}>
-            NEXT
-          </button>
+        <button className={module.btnNav} onClick={handleOnClickBack}>BACK</button>
+        <button type="submit" className={module.btnNav} onClick={handleOnClickNext}>NEXT</button>
         </div>
       </section>
       <Footer />

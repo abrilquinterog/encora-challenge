@@ -37,7 +37,6 @@ export const Education = () => {
       <section className={module.edSection}>
         <h4 className={module.step}>Step 3</h4>
         <h1 className={module.title}>Education</h1>
-
         <form className={module.containerForm}>
           <label className={module.fields}>
             School Name

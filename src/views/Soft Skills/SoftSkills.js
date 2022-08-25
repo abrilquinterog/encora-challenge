@@ -43,16 +43,13 @@ export const SoftSkills = () => {
   return (
     <main className={module.mainWork}>
       <Aside />
-
-      <section className={module.formContainer}>
-        <h2 className={module.step}>Step 4</h2>
-        <h2 className={module.title}>Soft Skills</h2>
-        <h3 className={module.description}>
-          Choose 5 of the most important skills to show your talents!
-        </h3>
-
-        <section className={module.checkboxText}>
-          <input type="checkbox" name="softSkills" value="Communication" onClick={handleChangeOnCheckbox}/>
+			<section className={module.formContainer}>
+				<h2 className={module.step}>Step 4</h2>
+        		<h2 className={module.title}>Soft Skills</h2>
+				<h3 className={module.description}>Choose 5 of the most important skills to show your talents!</h3>
+			<form>
+			<section className={module.checkboxText}>
+			<input type="checkbox" name="softSkills" value="Communication" onClick={handleChangeOnCheckbox}/>
 			<label class={module.checkbox}>Communication
   				<span class="checkmark"></span>
 			</label> <br />
@@ -139,15 +136,11 @@ export const SoftSkills = () => {
 				<span class="checkmark"></span>
 			</label>
 			</section>
-
-        <div className={module.navContainer}>
-          <button className={module.buttnsNav} onClick={handleOnClickBack}>
-            BACK
-          </button>
-          <button className={module.buttnsNav} onClick={handleOnClickNext}>
-            NEXT
-          </button>
-        </div>
+			</form>
+				<div className={module.navContainer}>
+					<button className={module.buttnsNav} onClick={handleOnClickBack}>BACK</button>
+					<button type="submit" className={module.buttnsNav} onClick={handleOnClickNext}>NEXT</button>
+				</div>
       </section>
       <Footer />
     </main>
