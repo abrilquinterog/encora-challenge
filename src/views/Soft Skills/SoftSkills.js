@@ -1,6 +1,6 @@
 import { Aside } from "../../components/Aside/Aside";
 import { useNavigate } from "react-router-dom";
-import module from './Soft-skills.module.css';
+import module from "./Soft-skills.module.css";
 import { Footer } from "../../components/Footer/Footer";
 import { useState } from "react";
 
@@ -9,14 +9,14 @@ export const SoftSkills = () => {
 
   const handleOnClickNext = () => {
     navigate("/extras");
-	console.log(skills);
+	  console.log(skills);
     localStorage.setItem('soft skills',JSON.stringify(skills));
     };
 
   const handleOnClickBack = () => {
     navigate("/education");
   };
-
+  
   const [skills, setSkills] = useState({softSkills: []});
 
   const handleChangeOnCheckbox = (e) => {
@@ -40,17 +40,15 @@ export const SoftSkills = () => {
 	}
   };
 
-
-    return (
-			<main className={module.mainWork}>
-			<section className={module.asideContainer}> <Aside/> </section>
-
+  return (
+    <main className={module.mainWork}>
+      <Aside />
 			<section className={module.formContainer}>
 				<h2 className={module.step}>Step 4</h2>
         		<h2 className={module.title}>Soft Skills</h2>
 				<h3 className={module.description}>Choose 5 of the most important skills to show your talents!</h3>
 			<form>
-			<section className={module.inputsCheck}>
+			<section className={module.checkboxText}>
 			<input type="checkbox" name="softSkills" value="Communication" onClick={handleChangeOnCheckbox}/>
 			<label class={module.checkbox}>Communication
   				<span class="checkmark"></span>
@@ -139,14 +137,12 @@ export const SoftSkills = () => {
 			</label>
 			</section>
 			</form>
-
 				<div className={module.navContainer}>
 					<button className={module.buttnsNav} onClick={handleOnClickBack}>BACK</button>
 					<button type="submit" className={module.buttnsNav} onClick={handleOnClickNext}>NEXT</button>
 				</div>
-		
       </section>
-	  <Footer />
-			</main>
-    )
-	};
+      <Footer />
+    </main>
+  );
+};

@@ -9,17 +9,19 @@ body {
 
 .formContainer {
     padding: 40px 290px 0px 82px;
+    width: 1000px;
     max-width: 1140px;
     display: flex;
     flex-direction: column;
     position: absolute;
-    left: 300px;
+    left: 20%;
 }
 
 .mainWork {
     display: flex;
     flex-direction: row;
 }
+
 .tips {
     Width: 111px;
     height: 39.06px;
@@ -45,9 +47,9 @@ body {
     font-weight: 400;
     font-size: 24px;
     line-height: 36px;
-    font-family: 'IBM Plex Sans';
     color: #44197E;
-    margin: 0px;
+    margin: 2px 0px;
+    padding: 0;
 }
 
 .workExpTittle {
@@ -57,10 +59,9 @@ body {
     font-size: 48px;
     line-height: 52px;
     color: #44197E;
-    margin-top: -8px;
-    /*border: solid red;*/
+    margin: 10px 0px;
 }
-label {
+.label {
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 700;
@@ -68,29 +69,29 @@ label {
     line-height: 21px;
     letter-spacing: 0.08em;
     color: #262429;
-    margin-top: 10px;
+    margin: 0.25rem;
 }
 
-input[type=text] {
+.input {
     width: 100%;
-    height: 52px;
-    gap: 10px;
-    padding: 16px;
+    margin: 0 0 1rem 0;
+    gap: .625rem;
+    padding: 1rem;
     border: 1px solid #BEBBC4;
-    border-radius: 48px;
+    border-radius: 3rem;
     font-family: 'IBM Plex Sans';
     font-style: normal;
     font-weight: 400;
-    font-size: 14px;
-    line-height: 20px;
-    color: #BEBBC4;
-    outline: none;
+    font-size: .875rem;
+    line-height: 1.25rem;
+    color: #262429;
 }
 
 .checkboxTech {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    gap: 1rem;
     width: 100%;
 }
 
@@ -107,15 +108,18 @@ input[type=text] {
 
 .techBtn {
     width: fit-content;
-    height: 48px;
     background: #D8D6DB;
-    border-radius: 32px;
+    border-radius: 3rem;
     padding: 12px 20px;
     display: inline-block;
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 600;
     font-size: 12px;
+}
+
+.techBtn::selection {
+    background: #44197E;
 }
 
 .formTextarea {
@@ -158,10 +162,6 @@ input[type=text] {
     width: 1140px;
     margin-bottom: 2.5rem;
 
-}
-
-.asideContainer {
-    width: 300px;
 }
 
 .addBtn {
