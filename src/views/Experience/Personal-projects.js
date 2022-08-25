@@ -2,7 +2,8 @@ import { Aside } from "../../components/Aside/Aside";
 import { useState } from "react";
 import { Footer } from "../../components/Footer/Footer";
 import { useNavigate } from "react-router-dom";
-import module from "./Personal-projects.module.css";
+import module from './Personal-projects.module.css';
+import {TipsPersonal} from '../Experience/TipsPersonal'
 
 export const PersonalProjects = () => {
   const navigate = useNavigate();
@@ -14,6 +15,7 @@ export const PersonalProjects = () => {
   const handleOnClickNext = () => {
     navigate("/education");
     console.log(PersonalProjects);
+    localStorage.setItem('personalProjects',JSON.stringify(PersonalProjects)); 
   };
 
   const [technologies, setTechnologies] = useState([
@@ -68,15 +70,15 @@ export const PersonalProjects = () => {
     }
   };
 
+      const [mostrarComponente, setMostrarComponente] = useState(false);
+
   return (
     <main className={module.mainWork}>
       <Aside />
       <section className={module.formContainer}>
         <h2 className={module.secondStep}>Step 2</h2>
         <h2 className={module.workExpTittle}>Personal Projects</h2>
-        <button className={module.tips}>
-          <i></i>TIPS
-        </button>
+        {mostrarComponente ? <TipsPersonal /> : null}
         <form>
           <label className={module.label}>
             Project Tittle <br />

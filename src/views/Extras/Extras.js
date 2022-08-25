@@ -2,6 +2,7 @@ import { useNavigate } from "react-router-dom";
 import module from "./Extras.module.css";
 import { Aside } from "../../components/Aside/Aside";
 import { Footer } from "../../components/Footer/Footer";
+import { useState } from "react";
 
 export const Extras = () => {
   const navigate = useNavigate();
@@ -11,7 +12,23 @@ export const Extras = () => {
   };
 
   const handleOnClickNext = () => {
-    navigate("/download-cv");
+    navigate("/download-cv");      
+    console.log(extrainfo);
+    localStorage.setItem('extrainfo',JSON.stringify(extrainfo)); 
+    };
+  };
+  
+     const [extrainfo, setExtraInfo]= useState({
+      certification:"",
+      issuingCertification:"",
+      issueYear:"",
+      expirationYear:"",
+      award:"",
+  });
+  
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setExtraInfo({ ...extrainfo, [name]: value });
   };
 
   return (
@@ -29,7 +46,9 @@ export const Extras = () => {
             <br />
             <input
               className={module.input}
+              name='certification'
               type="text"
+              onChange={handleChange}
               placeholder="e.g. Data Science"
             />
             <br />
@@ -39,14 +58,16 @@ export const Extras = () => {
             <br />
             <input
               className={module.input}
+              name='issuingCertification'
               type="text"
+              onChange={handleChange}
               placeholder="e.g. Deep Teaching Solutions"
             />
             <br />
           </label>
           <label className={module.formLabel}>
             Years of certification <br />
-            <select className={module.selector}>
+            <select className={module.selector} name='issueYear' onChange={handleChange}>
               <option selected value="Start Year">
                 Issue Year
               </option>
@@ -73,7 +94,7 @@ export const Extras = () => {
                 <option value="2021">2021</option>
                 <option value="2022">2022</option>
             </select>
-            <select className={module.selector}>
+            <select className={module.selector} name='expirationYear' onChange={handleChange}>
               <option selected value="End Year">
                 Expiration Year
               </option>
@@ -116,7 +137,9 @@ export const Extras = () => {
             <br />
             <input
               className={module.input}
+              name='award'
               type="text"
+              onChange={handleChange}
               placeholder="e.g. Data Analytics Award"
             />
             <br />

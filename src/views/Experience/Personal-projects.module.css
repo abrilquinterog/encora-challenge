@@ -157,11 +157,11 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    position: sticky;
-    bottom: 1.75rem;
     background-color: white;
     padding-right: 80px;
     width: 1140px;
+    margin-bottom: 2.5rem;
+
 }
 
 .addBtn {

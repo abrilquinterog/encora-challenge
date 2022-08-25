@@ -4,81 +4,71 @@ import { Footer } from "../../components/Footer/Footer";
 //import { useNavigate } from "react-router-dom";
 import module from "./Work-experience.module.css";
 import { useNavigate } from "react-router-dom";
+import { Tips } from "./Tips";
 
 export const WorkExperience = () => {
-  const navigate = useNavigate();
+    const navigate = useNavigate();
 
-  const handleOnClickBack = () => {
-    navigate("/options");
-  };
+    const handleOnClickBack = () => {
+        navigate('/options')};
+    
+    const handleOnClickNext = () => {
+        navigate('/education')
+        console.log(workExperience);
+        localStorage.setItem('workExperience',JSON.stringify(workExperience));
+    }; 
+   
+    
+    const [technologies,setTechnologies]=useState(["JAVASCRIPT", "C++", "PYTHON", "HTML", "RUBY", 
+    "SQL", "C#", "REACT JS", "NODE JS", "ANGULAR JS", "LAMP", "MEAN", "MEVN"]);
+    
+    const [workExperience, setWorkExperience]= useState({
+        company:"",
+        startYear:"",
+        endYear:"",
+        jobTittle:"",
+        stack:[],
+        jobDescription:"",
+        project:"",
+        projectDescription:"",
+    });
 
-  const handleOnClickNext = () => {
-    navigate("/education");
-    console.log(workExperience);
-  };
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setWorkExperience({ ...workExperience, [name]: value });
+      };
 
-  const [technologies, setTechnologies] = useState([
-    "JAVASCRIPT",
-    "C++",
-    "PYTHON",
-    "HTML",
-    "RUBY",
-    "SQL",
-    "C#",
-    "REACT JS",
-    "NODE JS",
-    "ANGULAR JS",
-    "LAMP",
-    "MEAN",
-    "MEVN",
-  ]);
+      const handleChangeOnCheckbox = (e) => {
+        // Destructuring
+        const { value, checked } = e.target;
+        const { stack } = workExperience;
+          
+        console.log(`${value} is ${checked}`);
+         
+        // Case 1 : The user checks the box
+        if (checked) {
+          setWorkExperience({
+            ...workExperience,stack: [...workExperience.stack, value]});
+        }
+      
+        // Case 2  : The user unchecks the box
+        else {
+          setWorkExperience({
+            ...workExperience(stack.filter((e) => e !== value)),
+          });
+        }
+      };
 
-  const [workExperience, setWorkExperience] = useState({
-    company: "",
-    startYear: "",
-    endYear: "",
-    jobTittle: "",
-    stack: [],
-    jobDescription: "",
-  });
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setWorkExperience({ ...workExperience, [name]: value });
-  };
-
-  const handleChangeOnCheckbox = (e) => {
-    // Destructuring
-    const { value, checked } = e.target;
-    const { stack } = workExperience;
-
-    console.log(`${value} is ${checked}`);
-
-    // Case 1 : The user checks the box
-    if (checked) {
-      setWorkExperience({
-        ...workExperience,
-        stack: [...workExperience.stack, value],
-      });
-    }
-
-    // Case 2  : The user unchecks the box
-    else {
-      setWorkExperience({
-        ...workExperience(stack.filter((e) => e !== value)),
-      });
-    }
-  };
-
+      const [mostrarComponente, setMostrarComponente] = useState(false);
+     
   return (
     <main className={module.mainWork}>
-      <Aside />
-      <section className={module.formContainer}>
+    <Aside/>
+    {mostrarComponente ? <Tips /> : null}
+    <section className={module.formContainer}>
         <h2 className={module.secondStep}>Step 2</h2>
         <h2 className={module.workExpTittle}>Work Experience</h2>
-        <button className={module.tips}>
-          <i></i>TIPS
-        </button>
+        <button className={module.tips} onClick={() => setMostrarComponente(!mostrarComponente)}><i></i>TIPS</button>
         <form className={module.formWork}>
           <label className={module.formLabel}>
             Company/Employer

@@ -1,4 +1,4 @@
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Aside } from "../../components/Aside/Aside";
 import { Footer } from "../../components/Footer/Footer";
 import module from "./Education.module.css";
@@ -17,12 +17,14 @@ export const Education = () => {
     const { name, value } = e.target;
     setEducation({ ...education, [name]: value });
     console.log(education);
+
   };
 
   const navigate = useNavigate();
 
   const handleOnClickNext = () => {
     navigate("/soft-skills");
+    localStorage.setItem('education',JSON.stringify(education));
   };
 
   const handleOnClickBack = () => {
