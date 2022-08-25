@@ -22,9 +22,13 @@ export const Education = () => {
 
   const navigate = useNavigate();
 
-  const handleOnClick = () => {
+  const handleOnClickNext = () => {
     navigate("/soft-skills");
   };
+
+  const handleOnClickBack = () => {
+    navigate("/work-experience")
+  }
 
   return (
     <main>
@@ -97,8 +101,8 @@ export const Education = () => {
       <button className={module.addSchool}>ADD SCHOOL</button> <br />
 
       <section className={module.btnsSection}>
-        <button className={module.buttons}>BACK</button>
-        <button className={module.buttons} onClick={handleOnClick}> NEXT </button>
+        <button className={module.buttons} onClick={handleOnClickBack}>BACK</button>
+        <button className={module.buttons} onClick={handleOnClickNext}>NEXT</button>
       </section>
 		</form>
     <Footer />
@@ -106,4 +110,3 @@ export const Education = () => {
     </main>
   );
 };
-

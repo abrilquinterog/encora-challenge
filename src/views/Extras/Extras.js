@@ -4,16 +4,16 @@ import { Aside } from "../../components/Aside/Aside";
 import { Footer } from "../../components/Footer/Footer";
 
 export const Extras = () => {
-    const navigate = useNavigate();
+  const navigate = useNavigate();
 
-		const handleOnClick = () => {
-        navigate('/soft-skills');
-         }
-    /*const handleOnClickNext = () => {
+  const handleOnClickBack = () => {
+    navigate("/soft-skills");
+  };
+  
+  const handleOnClickNext = () => {
         navigate('/download-cv');
-    }*/
-
-         return (
+    };
+    return (
       <main className={module.main}>
     	<section className={module.asideContainer}> <Aside/> </section>
             <section className={module.formContainer}>
@@ -49,8 +49,8 @@ export const Extras = () => {
             <button className={module.addBtn}>ADD AWARD</button><br/>
 
             <div className={module.navContainer}>
-              <button className={module.btnNav} onClick={handleOnClick}>BACK</button>
-              <button className={module.btnNav}>CREATE RESUME</button>
+              <button className={module.btnNav} onClick={handleOnClickBack}>BACK</button>
+              <button className={module.btnNav} onClick={handleOnClickNext}>CREATE RESUME</button>
             </div>
             </form>
             </section>

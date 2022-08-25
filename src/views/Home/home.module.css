@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&family=Montserrat:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&family=Montserrat:wght@800&display=swap');
 
 .main {
     display: flex;
@@ -34,10 +34,13 @@
     position: absolute;
     left: 50%;
     background-image: url('../../assets/Background-2.png');
+    width: 50%;
+    height: 100%;
 }
 
-h1 {
+.h1 {
     font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
     font-size: 6rem;
     line-height: 80px;
     text-align: right;
@@ -46,19 +49,39 @@ h1 {
     width: 450px;
     height: 240px;
     position: relative;
-    top: 15%;
+    top: 20%;
     left: 15%;
 }
 
-p {
+.p {
     font-family: 'IBM Plex Sans';
     font-size: 1.5rem;
     line-height: 36px;
     text-align: right;
     letter-spacing: -0.02em;
-    width: 450px;
+    width: 400px;
     position: relative;
-    top: 10%;
-    left: 15%;
+    top: 20%;
+    left: 21%;
     color: #000000;
+}
+
+.btn {
+    width: 170px;
+    height: 56px;
+    position: relative;
+    top: 20%;
+    left: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #40C1EF;
+    border-color: #40C1EF;
+    border-radius: 32px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 26px;
+    color: #FFFFFF;
 }

@@ -16,22 +16,18 @@ const Options = () => {
         navigate('/personal-info');
     }
 
-    const handleOnClickProjects = () => {
-        navigate('/personal-projects');
-    }
-
-    const handleOnClickWork = () => {
-        navigate('/work-experience');
+    const handleOnClickNext = (path) => {
+        navigate(`/${path}`);
     }
 
     const handleSelected =(kind)=>{
-        setSelected(kind)
+        setSelected(kind);
     }
 
 
   return (
     <main className={style.optionsMain}>
-    {<Aside />}
+    <Aside />
     <section className={style.contentSection}>
         <container className={style.titleContainer}>
             <h3 className={style.secondStepTitle}>Step 2</h3>
@@ -56,7 +52,8 @@ const Options = () => {
 
         <container className={style.buttonsContainer}>
             <button className={style.backButton} onClick={handleOnClickBack}>BACK</button>
-            <button className={style.nextButton} disabled={selected==='/personal-projects' || selected==='/work-experience'?false:true} onClick={()=>{navigate(selected)}} >NEXT</button>
+            <button className="next-button" onClick={() => selected === 'first' ? handleOnClickNext('personal-projects') : handleOnClickNext('work-experience')}>NEXT</button>
+            <button className={style.nextButton} disabled={selected==='/personal-projects' || selected==='/work-experience'?false:true} onClick={() => selected === '/personal-projects' ? handleOnClickNext('personal-projects') : handleOnClickNext('work-experience')}>NEXT</button>
         </container>
     </section>
 
@@ -64,4 +61,4 @@ const Options = () => {
     </main>
   )
 }
-export default Options
+export default Options;

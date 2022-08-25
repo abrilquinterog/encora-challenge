@@ -4,21 +4,33 @@ import { Footer } from "../../components/Footer/Footer";
 import { useNavigate } from "react-router-dom";
 import module from './Personal-projects.module.css';
 
-
-
 export const PersonalProjects = () => {
-    const navigate = useNavigate();
+  const navigate = useNavigate();
 
-    const handleOnClickBack = () => {
-        navigate('/options')};
-    
-    const handleOnClickNext = () => {
-        navigate('/education')
-        console.log(PersonalProjects)};
-      
-    
-    const [technologies,setTechnologies]=useState(["JAVASCRIPT", "C++", "PYTHON", "HTML", "RUBY", 
-    "SQL", "C#", "REACT JS", "NODE JS", "ANGULAR JS", "LAMP", "MEAN", "MEVN"]);
+  const handleOnClickBack = () => {
+    navigate("/options");
+  };
+
+  const handleOnClickNext = () => {
+    navigate("/education");
+    console.log(PersonalProjects)
+  };
+
+  const [technologies, setTechnologies] = useState([
+    "JAVASCRIPT",
+    "C++",
+    "PYTHON",
+    "HTML",
+    "RUBY",
+    "SQL",
+    "C#",
+    "REACT JS",
+    "NODE JS",
+    "ANGULAR JS",
+    "LAMP",
+    "MEAN",
+    "MEVN",
+  ]);
 
     const [PersonalProjects, setPersonalProjects]= useState({
         projectTittle:"",
@@ -88,13 +100,14 @@ export const PersonalProjects = () => {
                         <label className={module.techBtn}>
                         <input selected value={technology} onChange={handleChangeOnCheckbox} type="checkbox"/><span>{technology}</span>
                         </label>
-                        )
-                })}
+                        );
+                })
+                }
             </div><br/>
 
             <button className={module.addBtn}>ADD TECH STACK</button><br/>
 
-            <label >Lessons Learned(150 characters)<br/>
+            <label>Lessons Learned (150 characters)<br/>
             <input onChange={handleChange} name='lessons'type="textarea" placeholder="Type lessons learned..." className={module.formTextarea} maxLength={150}/>
             </label><br/>
 
@@ -105,8 +118,8 @@ export const PersonalProjects = () => {
         <button className={module.btnNav} onClick={handleOnClickBack}>BACK</button>
         <button className={module.btnNav} onClick={handleOnClickNext}>NEXT</button>
         </div>
-    </section>
-   <Footer />
+      </section>
+      <Footer />
     </main>
   );
 };

@@ -4,15 +4,16 @@ import module from './Soft-skills.module.css';
 import { Footer } from "../../components/Footer/Footer";
 
 export const SoftSkills = () => {
-	const navigate = useNavigate();
+  const navigate = useNavigate();
 
-	const handleOnClick = () => {
-			navigate('/education');
-			 }
+  const handleOnClickNext = () => {
+    navigate("/extras");
+  };
 
-	const handleOnClickNext = () => {
-		navigate('/extras');
-	}
+
+  const handleOnClickBack = () => {
+    navigate("/education");
+  };
 
     return (
 			<main className={module.mainWork}>
@@ -113,7 +114,7 @@ export const SoftSkills = () => {
 			</section>
 
 				<div className={module.navContainer}>
-					<button className={module.buttnsNav} onClick={handleOnClick}>BACK</button>
+					<button className={module.buttnsNav} onClick={handleOnClickBack}>BACK</button>
 					<button className={module.buttnsNav} onClick={handleOnClickNext}>NEXT</button>
 				</div>
 		

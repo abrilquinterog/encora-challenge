@@ -85,6 +85,10 @@ input[type=text] {
     font-weight: 400;
     font-size: 14px;
     line-height: 20px;
+    color: #262429;
+}
+
+input[type=text]::placeholder {
     color: #BEBBC4;
     outline: none;
 }
