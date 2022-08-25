@@ -1,4 +1,4 @@
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Aside } from "../../components/Aside/Aside";
 import { Footer } from "../../components/Footer/Footer";
 import module from './Education.module.css';
@@ -17,18 +17,14 @@ export const Education = () => {
 	const handleInputChange = (e) => {
     const { name, value } = e.target;
     setEducation({ ...education, [name]: value });
-		console.log(education)
   };
 
   const navigate = useNavigate();
 
   const handleOnClickNext = () => {
     navigate("/soft-skills");
+    localStorage.setItem('education',JSON.stringify(education));
   };
-
-  const handleOnClickBack = () => {
-    navigate("/work-experience")
-  }
 
   return (
     <main>
@@ -39,7 +35,7 @@ export const Education = () => {
 
 		<form className={module.containerForm}>
       <label className={module.fields}>School Name
-      	<input className={module.boxInput}type="text" name="school" 
+      	<input className={module.boxInput} type="text" name="school" 
 				onChange= {handleInputChange} placeholder="e.g. University of Columbia" />
 			</label>
 
@@ -52,7 +48,7 @@ export const Education = () => {
 			</label><br />
 
 			<label className={module.fields}>Years of study </label><br />
-            <select className={module.selector}>Start Year
+            <select className={module.selector} onChange= {handleInputChange} >Start Year
                 <option selected value="2000">2000</option>
                 <option selected value="2001">2001</option>
                 <option selected value="2002">2002</option>
@@ -79,7 +75,7 @@ export const Education = () => {
             </select>
 
 				<option selected value="Start Year">Start Year</option>	
-            <select className={module.selector}>
+            <select className={module.selector} onChange= {handleInputChange} >
             <option selected value="2000">2000</option>
                 <option selected value="2001">2001</option>
                 <option selected value="2002">2002</option>
@@ -101,7 +97,7 @@ export const Education = () => {
       <button className={module.addSchool}>ADD SCHOOL</button> <br />
 
       <section className={module.btnsSection}>
-        <button className={module.buttons} onClick={handleOnClickBack}>BACK</button>
+      <button className={module.buttons}><Link to={'..'} onClick={(e) => {e.preventDefault(); navigate(-1);}}>BACK</Link></button>
         <button className={module.buttons} onClick={handleOnClickNext}>NEXT</button>
       </section>
 		</form>
