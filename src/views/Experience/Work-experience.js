@@ -4,6 +4,7 @@ import { Footer } from "../../components/Footer/Footer";
 //import { useNavigate } from "react-router-dom";
 import module from './Work-experience.module.css';
 import { useNavigate } from "react-router-dom";
+import { Tips } from "./Tips";
 
 
 
@@ -16,6 +17,7 @@ export const WorkExperience = () => {
     const handleOnClickNext = () => {
         navigate('/education')
         console.log(workExperience);
+        localStorage.setItem('workExperience',JSON.stringify(workExperience));
     }; 
    
     
@@ -28,7 +30,9 @@ export const WorkExperience = () => {
         endYear:"",
         jobTittle:"",
         stack:[],
-        jobDescription:""
+        jobDescription:"",
+        project:"",
+        projectDescription:"",
     });
 
     const handleChange = (e) => {
@@ -56,14 +60,17 @@ export const WorkExperience = () => {
           });
         }
       };
+
+      const [mostrarComponente, setMostrarComponente] = useState(false);
      
   return (
     <main className={module.mainWork}>
     <section className={module.asideContainer}> <Aside/> </section>
+    {mostrarComponente ? <Tips /> : null}
     <section className={module.formContainer}>
         <h2 className={module.secondStep}>Step 2</h2>
         <h2 className={module.workExpTittle}>Work Experience</h2>
-        <button className={module.tips}><i></i>TIPS</button>
+        <button className={module.tips} onClick={() => setMostrarComponente(!mostrarComponente)}><i></i>TIPS</button>
         <form className={module.formWork}>
             <label className={module.formLabel}>Company/Employer<br/>
             <input name='company' onChange={handleChange} type="text" placeholder="e.g. Encora"/><br/>
@@ -144,6 +151,14 @@ export const WorkExperience = () => {
 
             <label>Job Description<br/>
             <input onChange={handleChange} name='jobDescription' type="textarea" placeholder="Type job description..." className={module.formTextarea}/>
+            </label>
+
+            <label>Project<br/>
+            <input onChange={handleChange} name='project' type="text" placeholder="e.g. WorkApp" className={module.formInput}/>
+            </label>
+
+            <label>Project Description<br/>
+            <input onChange={handleChange} name='projectDescription' type="textarea" placeholder="Type project description..." className={module.formTextarea}/>
             </label>
         </form>
         
