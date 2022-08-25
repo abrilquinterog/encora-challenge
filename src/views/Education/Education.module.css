@@ -1,10 +1,11 @@
 .edSection {
-	position: absolute;
-	width: 71.25em;
-	height: 64em;
-	left: 18.75em;
-	top: 0em;
-	background-color: #FFFFFF;
+	padding: 40px 290px 50px 82px;
+    width: 1000px;
+    max-width: 1140px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    left: 20%;
 }
 
 .step {
@@ -13,40 +14,58 @@
     font-weight: 400;
     font-size: 24px;
     line-height: 36px;
-    font-family: 'IBM Plex Sans';
     color: #44197E;
-    margin: 0px;
+    margin: 2px 0px;
+    padding: 0;
 }
 
 .title {
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 700;
-    font-size: 48px;
+    font-size: 3rem;
     line-height: 52px;
     color: #44197E;
-    margin-top: -8px;
+    margin: 10px 0px;
 }
 
 .fields {
-	width: 109px;
-	height: 21px;
 	font-family: 'Montserrat';
-	font-style: normal;
-	font-weight: 700;
-	font-size: 14px;
-	line-height: 21px;
-	letter-spacing: 0.08em;
-	color: #262429;
+    font-style: normal;
+    font-weight: 700;
+    font-size: .875rem;
+    line-height: 1.3125rem;
+    letter-spacing: 0.08em;
+    color: #262429;
+    margin: .25rem;
 }
 
 .boxInput {
-	width: 25.625em;
-	height: 30px;
-	border-radius: 25px;
-	border-style: ridge;
-	border-color: #BEBBC4;
-	padding-left: 10px; 
+	width: 100%;
+    margin: 0 0 1rem 0;
+    gap: .625rem;
+    padding: 1rem;
+    border: 1px solid #BEBBC4;
+    border-radius: 3rem;
+    font-family: 'IBM Plex Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: .875rem;
+    line-height: 1.25rem;
+    color: #262429;
+}
+
+.selector {
+    height: 50px;
+    width: 49.5%;
+    border: 1px solid #BEBBC4;
+    border-radius: 48px;
+    padding: 16px;
+    color: #BEBBC4;
+    background-color: white;
+    outline: none;
+    margin: 0 0.3rem 1rem 0;
+    gap: 1rem;
 }
 
 ::placeholder {
@@ -96,4 +115,14 @@ color: #BEBBC4;
     padding-right: 80px;
     width: 1140px;
 
+}
+
+.buttons:hover {
+    background-color: #2D1154;
+    color: white;
+}
+
+.buttons:focus {
+    background-color: #2D1154;
+    color: white;
 }
