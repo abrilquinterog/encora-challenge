@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&family=Montserrat:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap');
+
+.resume {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    padding: 3em;
+}
+
+.container1 {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    border: 2em;
+}
+
+.resumeTitle {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 52px;
+        color: #44197E;
+        margin: 10px 0px;
+    
+}
+
+.btnContainer{
+    display: flex;
+    flex-direction: row;
+}
+
+.thanks{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.download {
+    width: 170px;
+    height: 46px;
+    position: relative;
+    top: 5%;
+    left: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #40C1EF;
+    border-color: #40C1EF;
+    border-radius: 32px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    color: #FFFFFF;
+    border: none;
+}
+
+h3 {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 52px;
+    color: #44197E;
+    margin: 10px 0px;
+}
+
+.description {
+    position: relative;
+    top: 5%;
+    left: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'IBM Plex Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    color: #000000;
+}
