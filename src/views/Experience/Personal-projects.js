@@ -14,7 +14,8 @@ export const PersonalProjects = () => {
 
   const handleOnClickNext = () => {
     navigate("/education");
-    console.log(PersonalProjects)
+    console.log(PersonalProjects);
+    localStorage.setItem('personalProjects',JSON.stringify(PersonalProjects)); 
   };
 
   const [technologies, setTechnologies] = useState([
