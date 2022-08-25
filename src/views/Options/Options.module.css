@@ -10,9 +10,7 @@
 
 .optionsMain {
     display: flex;
-    flex-direction: row-reverse;
-    height: 100vh;
-    width: 100%;
+    flex-direction: row;
 }
 
 .contentSection {
@@ -20,7 +18,7 @@
     flex-direction: column;
     height: 100%;
     width: 60%;
-    margin-right: 15%;
+    margin: 0 auto;
 }
 
 .titleContainer {
@@ -29,7 +27,27 @@
     height: 20%;
     color: #44197E;
     font-size: 24px;
-    /* border: green solid 1px; */
+}
+
+.secondStepTitle, .optionTitle {
+    font-family: 'IBM Plex Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 36px;
+    font-family: 'IBM Plex Sans';
+    color: #44197E;
+    margin: 0px;
+}
+
+.workExperienceTitle {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 52px;
+    color: #44197E;
+    margin-top: -8px;
 }
 
 .cardsContainer {
@@ -37,7 +55,7 @@
     flex-direction: row;
     justify-content: space-between;
     height: 60%;
-    /* border: red solid 1px; */
+    row-gap: 50px;
 }
 
 .cards {
@@ -58,7 +76,6 @@
     border: none;
     background-color: #F1EFEF;
     border-radius: 60px;
-    /* border: purple solid 1px; */
 }
 
 .cards:focus {
@@ -67,9 +84,8 @@
     color: #40C1EF;
 }
 
-.projectsImage, .workImage,
-.projectsGif, .workGif {
-    /* position: absolute; */
+.projectsImage, .workImage {
+    display: flex;
     width: 309.47px;
     height: 243.29px;
     left: 179.33px;
@@ -85,21 +101,31 @@
     height: 10%;
     padding: 50px;
     justify-content: space-between;
-    /* border: blue solid 1px; */
 }
 
 .backButton {
-    display: flex;
-    cursor: pointer;
-    color: black;
-    background-color: white;
-    border: none;
+    Width: 123px;
+    Height: 48px;
+    padding: 12px 24px;
+    gap: 10px;
+    border: 1px solid #585360;
     border-radius: 32px;
+    background: none;
+    cursor: pointer;
 }
 
-.nextButton {
-    display: flex;
-    cursor: pointer;
-    border: black solid;
+.backButton:hover {
+    background-color: #2D1154;
+    color: white;
+}
+
+.nextButton{
+    Width: 123px;
+    Height: 48px;
+    padding: 12px 24px;
+    gap: 10px;
+    color: #8A8494;
     border-radius: 32px;
+    outline: none;
+    background: #D8D6DB;
 }
