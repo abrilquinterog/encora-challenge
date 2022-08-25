@@ -27,10 +27,6 @@ export const Education = () => {
     localStorage.setItem('education',JSON.stringify(education));
   };
 
-  const handleOnClickBack = () => {
-    navigate("/work-experience");
-  };
-
   return (
     <main className={module.main}>
       <Aside />
@@ -121,9 +117,7 @@ export const Education = () => {
           <br />
           <button className={module.addSchool}>ADD SCHOOL</button> <br />
           <section className={module.btnsSection}>
-            <button className={module.buttons} onClick={handleOnClickBack}>
-              BACK
-            </button>
+          <button className={module.buttons}><Link to={'..'} onClick={(e) => {e.preventDefault(); navigate(-1);}}>BACK</Link></button>
             <button className={module.buttons} onClick={handleOnClickNext}>
               NEXT
             </button>
