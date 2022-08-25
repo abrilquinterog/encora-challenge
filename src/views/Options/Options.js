@@ -13,11 +13,15 @@ const Options = () => {
     const [selected,setSelected] = useState(null)
     const navigate = useNavigate();
 
-    const handleOnClick = () => {
+    const handleOnClickBack = () => {
         navigate('/personal-info');
     }
+
+    const handleOnClickNext = (path) => {
+        navigate(`/${path}`);
+    }
     const handleSelected =(kind)=>{
-        setSelected(kind)
+        setSelected(kind);
     }
 
 
@@ -35,13 +39,13 @@ const Options = () => {
 
         <container className="cards-container">
             <button className="cards" onClick={()=>{
-                handleSelected('first')
+                handleSelected('first');
             }}>
                 Personal<br/> Projects<br/>
                 <img src={selected==='first'?gif1:img1} alt='Money Illustration'/>
             </button>
             <button className="cards" onClick={()=>{
-                handleSelected('second')
+                handleSelected('second');
             }}>
                 Work<br/> Experience
                 <img  src={selected==='second'?gif2:img2} alt='Money Illustration'/>
@@ -49,8 +53,8 @@ const Options = () => {
         </container>
 
         <container className="buttons-container">
-            <button className="back-button" onClick={handleOnClick}>BACK</button>
-            <button className="next-button" >NEXT</button>
+            <button className="back-button" onClick={handleOnClickBack}>BACK</button>
+            <button className="next-button" onClick={() => selected === 'first' ? handleOnClickNext('personal-projects') : handleOnClickNext('work-experience')}>NEXT</button>
         </container>
     </section>
 
@@ -58,4 +62,4 @@ const Options = () => {
     </main>
   )
 }
-export default Options
+export default Options;

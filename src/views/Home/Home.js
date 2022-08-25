@@ -17,9 +17,9 @@ export const Home = () => {
       <img src={landing} alt='' className={styles.img}/>
     </aside>
     <section className={styles.section}>
-      <h1>Build your Resume</h1>
-      <p>Create your own Encora resume and join the team</p>
-      <button onClick={handleOnClick}>START NOW!</button>
+      <h1 className={styles.h1}>Build your Resume</h1>
+      <p className={styles.p}>Create your own Encora resume and join the team</p>
+      <button className={styles.btn} onClick={handleOnClick}>START NOW!</button>
     </section>
   </main>
   )

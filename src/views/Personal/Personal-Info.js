@@ -14,12 +14,14 @@ export const Personal = () => {
     job: "",
     summary: "",
     email: "",
-    phone: 0,
+    phone: "",
   });
 
-  const handleOnSubmit = () => {
+  const handleOnSubmit = async () => {
+    await localStorage.setItem('userInfo', JSON.stringify(personalInfo));
     navigate("/options");
     console.log(personalInfo);
+    
   };
 
   const handleInputChange = (e) => {
@@ -111,6 +113,7 @@ export const Personal = () => {
               className={styles.input}
               onChange={handleInputChange}
               required
+              autoComplete="true"
             />
           </label>
 
