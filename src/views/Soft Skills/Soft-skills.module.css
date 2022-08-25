@@ -3,19 +3,15 @@
     flex-direction: row;
 }
 
-.asideContainer {
-    width: 300px;
-}
-
 .step {
-font-family: 'IBM Plex Sans';
-font-style: normal;
-font-weight: 400;
-font-size: 24px;
-line-height: 36px;
-font-family: 'IBM Plex Sans';
-color: #44197E;
-margin: 0px;
+    font-family: 'IBM Plex Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 36px;
+    font-family: 'IBM Plex Sans';
+    color: #44197E;
+    margin: 0px;
 }
 
 .title {
@@ -30,16 +26,35 @@ margin: 0px;
 
 .description {
     color: #44197E;
-
-} 
+}
 
 .formContainer {
-    padding: 40px 290px 0px 82px;
+    padding: 40px 290px 50px 82px;
     max-width: 1140px;
     display: flex;
     flex-direction: column;
-    position: absolute;
-    left: 300px;
+    position: relative;
+    left: 20%;
+}
+
+.checkboxTech {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 1rem;
+    width: 100%;
+}
+
+.checkboxBtn {
+    width: fit-content;
+    background: #44197E;
+    border-radius: 3rem;
+    padding: 12px 20px;
+    display: inline-block;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
 }
 
 .navContainer {
@@ -62,4 +77,14 @@ margin: 0px;
     border-radius: 32px;
     background: none;
 
+}
+
+.buttnsNav:hover {
+    background-color: #2D1154;
+    color: white;
+}
+
+.buttnsNav:focus {
+    background-color: #2D1154;
+    color: white;
 }
