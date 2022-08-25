@@ -17,8 +17,8 @@ export const Personal = () => {
     phone: "",
   });
 
-  const handleOnSubmit = async () => {
-    await localStorage.setItem('userInfo', JSON.stringify(personalInfo));
+  const handleOnSubmit = () => {
+    localStorage.setItem('userInfo', JSON.stringify(personalInfo));
     navigate("/options");
     console.log(personalInfo);
     
