@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat';
+    box-sizing: border-box;
+}
+
+.optionsMain {
+    display: flex;
+    flex-direction: row;
+}
+
+.contentSection {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 60%;
+    margin: 0 auto;
+}
+
+.titleContainer {
+    display: flex;
+    margin-top: 25px;
+    height: 20%;
+    color: #44197E;
+    font-size: 24px;
+}
+
+.secondStepTitle, .optionTitle {
+    font-family: 'IBM Plex Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 36px;
+    font-family: 'IBM Plex Sans';
+    color: #44197E;
+    margin: 0px;
+}
+
+.workExperienceTitle {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 52px;
+    color: #44197E;
+    margin-top: -8px;
+}
+
+.cardsContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 60%;
+    row-gap: 50px;
+}
+
+.cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: auto;
+    cursor: pointer;
+    width: 475px;
+    height: 586px;
+    left: 582px;
+    color: #585360;
+    font-size: 48px;
+    font-weight: 700;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: none;
+    background-color: #F1EFEF;
+    border-radius: 60px;
+}
+
+.cards:focus {
+    box-shadow: 0px 4px 14px rgba(32, 96, 119, 0.25);
+    background-color: rgba(64, 193, 239, 0.2);
+    color: #40C1EF;
+}
+
+.projectsImage, .workImage {
+    display: flex;
+    width: 309.47px;
+    height: 243.29px;
+    left: 179.33px;
+    top: 374.29px;
+    border-radius: 0px 0px 60px 0px;
+}
+
+
+
+.buttonsContainer {
+    display: flex;
+    flex-direction: row;
+    height: 10%;
+    padding: 50px;
+    justify-content: space-between;
+}
+
+.backButton {
+    Width: 123px;
+    Height: 48px;
+    padding: 12px 24px;
+    gap: 10px;
+    border: 1px solid #585360;
+    border-radius: 32px;
+    background: none;
+    cursor: pointer;
+}
+
+.backButton:hover {
+    background-color: #2D1154;
+    color: white;
+}
+
+.nextButton{
+    Width: 123px;
+    Height: 48px;
+    padding: 12px 24px;
+    gap: 10px;
+    color: #8A8494;
+    border-radius: 32px;
+    outline: none;
+    background: #D8D6DB;
+}
