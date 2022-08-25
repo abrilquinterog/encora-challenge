@@ -164,7 +164,7 @@ export const WorkExperience = () => {
         
         <div className={module.navContainer}>
         <button className={module.btnNav} onClick={handleOnClickBack}>BACK</button>
-        <button className={module.btnNav} onClick={handleOnClickNext}>NEXT</button>
+        <button type="submit" className={module.btnNav} onClick={handleOnClickNext}>NEXT</button>
         </div>
     </section>
    <Footer />

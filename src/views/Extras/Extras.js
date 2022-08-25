@@ -67,7 +67,7 @@ export const Extras = () => {
 
             <div className={module.navContainer}>
               <button className={module.btnNav} onClick={handleOnClickBack}>BACK</button>
-              <button className={module.btnNav} onClick={handleOnClickNext}>CREATE RESUME</button>
+              <button type="submit" className={module.btnNav} onClick={handleOnClickNext}>CREATE RESUME</button>
             </div>
             </form>
             </section>

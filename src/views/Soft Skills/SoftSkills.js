@@ -49,7 +49,7 @@ export const SoftSkills = () => {
 				<h2 className={module.step}>Step 4</h2>
         		<h2 className={module.title}>Soft Skills</h2>
 				<h3 className={module.description}>Choose 5 of the most important skills to show your talents!</h3>
-
+			<form>
 			<section className={module.inputsCheck}>
 			<input type="checkbox" name="softSkills" value="Communication" onClick={handleChangeOnCheckbox}/>
 			<label class={module.checkbox}>Communication
@@ -138,10 +138,11 @@ export const SoftSkills = () => {
 				<span class="checkmark"></span>
 			</label>
 			</section>
+			</form>
 
 				<div className={module.navContainer}>
 					<button className={module.buttnsNav} onClick={handleOnClickBack}>BACK</button>
-					<button className={module.buttnsNav} onClick={handleOnClickNext}>NEXT</button>
+					<button type="submit" className={module.buttnsNav} onClick={handleOnClickNext}>NEXT</button>
 				</div>
 		
       </section>

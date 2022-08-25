@@ -98,7 +98,7 @@ export const Education = () => {
 
       <section className={module.btnsSection}>
       <button className={module.buttons}><Link to={'..'} onClick={(e) => {e.preventDefault(); navigate(-1);}}>BACK</Link></button>
-        <button className={module.buttons} onClick={handleOnClickNext}>NEXT</button>
+        <button type="submit" className={module.buttons} onClick={handleOnClickNext}>NEXT</button>
       </section>
 		</form>
     <Footer />
