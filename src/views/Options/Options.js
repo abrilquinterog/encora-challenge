@@ -1,16 +1,15 @@
-//import { Aside } from '../../components/Aside';
-import './options.css';
+import { Aside } from "../../components/Aside/Aside";
+import { Footer } from "../../components/Footer/Footer";
+import style from './Options.module.css';
 import { useState } from 'react';
 import { useNavigate } from "react-router-dom";
-import img1 from '../../assets/Money Illustration.png'
-import img2 from '../../assets/Write Illustration.png'
-import gif1 from '../../assets/Personal-Project.gif'
-import gif2 from '../../assets/Work-Experience.gif'
-import { Aside } from '../../components/Aside/Aside';
-import { Footer } from '../../components/Footer/Footer';
+import projectsImage from '../../assets/Money Illustration.png'
+import projectsGif from '../../assets/Personal-Project.gif'
+import workImage from '../../assets/Write Illustration.png'
+import workGif from '../../assets/Work-Experience.gif'
 
 const Options = () => {
-    const [selected,setSelected] = useState(null)
+    const [selected, setSelected] = useState()
     const navigate = useNavigate();
 
     const handleOnClickBack = () => {
@@ -20,41 +19,41 @@ const Options = () => {
     const handleOnClickNext = (path) => {
         navigate(`/${path}`);
     }
+
     const handleSelected =(kind)=>{
         setSelected(kind);
     }
 
 
   return (
-    <main className="main">
+    <main className={style.optionsMain}>
     <Aside />
-
-    <section className="content-section">
-        <container className="title-container">
-            <p>Step 2<br/>
-            Work Experience<br/>
-            Select one option<br/>
-            </p>
+    <section className={style.contentSection}>
+        <container className={style.titleContainer}>
+            <h3 className={style.secondStepTitle}>Step 2</h3>
+            <h2 className={style.workExperienceTitle}>Work Experience</h2>
+            <h3 className={style.optionTitle}>Select one option</h3>
         </container>
 
-        <container className="cards-container">
-            <button className="cards" onClick={()=>{
-                handleSelected('first');
+        <container className={style.cardsContainer}>
+            <button className={style.cards} onClick={()=>{
+                handleSelected('/personal-projects');
             }}>
                 Personal<br/> Projects<br/>
-                <img src={selected==='first'?gif1:img1} alt='Money Illustration'/>
+                {<img className={style.projectsImage} src={selected==='/personal-projects'?projectsGif:projectsImage} alt='Money Illustration'/>}
             </button>
-            <button className="cards" onClick={()=>{
-                handleSelected('second');
-            }}>
+            <button className={style.cards} onClick={()=>{
+                handleSelected('/work-experience')
+            }} >
                 Work<br/> Experience
-                <img  src={selected==='second'?gif2:img2} alt='Money Illustration'/>
+                {<img className={style.workImage} src={selected==='/work-experience'?workGif:workImage} alt='Write Illustration'/>}
             </button>
         </container>
 
-        <container className="buttons-container">
-            <button className="back-button" onClick={handleOnClickBack}>BACK</button>
+        <container className={style.buttonsContainer}>
+            <button className={style.backButton} onClick={handleOnClickBack}>BACK</button>
             <button className="next-button" onClick={() => selected === 'first' ? handleOnClickNext('personal-projects') : handleOnClickNext('work-experience')}>NEXT</button>
+            <button className={style.nextButton} disabled={selected==='/personal-projects' || selected==='/work-experience'?false:true} onClick={() => selected === '/personal-projects' ? handleOnClickNext('personal-projects') : handleOnClickNext('work-experience')}>NEXT</button>
         </container>
     </section>
 

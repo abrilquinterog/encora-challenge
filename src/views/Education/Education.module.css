@@ -1,0 +1,99 @@
+.edSection {
+	position: absolute;
+	width: 71.25em;
+	height: 64em;
+	left: 18.75em;
+	top: 0em;
+	background-color: #FFFFFF;
+}
+
+.step {
+    font-family: 'IBM Plex Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 36px;
+    font-family: 'IBM Plex Sans';
+    color: #44197E;
+    margin: 0px;
+}
+
+.title {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 52px;
+    color: #44197E;
+    margin-top: -8px;
+}
+
+.fields {
+	width: 109px;
+	height: 21px;
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 21px;
+	letter-spacing: 0.08em;
+	color: #262429;
+}
+
+.boxInput {
+	width: 25.625em;
+	height: 30px;
+	border-radius: 25px;
+	border-style: ridge;
+	border-color: #BEBBC4;
+	padding-left: 10px; 
+}
+
+::placeholder {
+	width: 410px;
+	height: 20px;
+	letter-spacing: 0em;
+	text-align: left;
+	font-family: 'IBM Plex Sans';
+	font-style: normal;
+	font-weight: 400;
+font-size: 14px;
+line-height: 20px;
+color: #BEBBC4;
+}
+
+.buttons {
+    Width: 123px;
+    Height: 48px;
+    padding: 12px 24px;
+    gap: 10px;
+    border: 1px solid #585360;
+    border-radius: 32px;
+    background: none;
+}
+
+.addSchool {
+	width: 205px;
+    height: 40px;
+    border-radius: 20px;
+    border-color: transparent;
+    background-color: transparent;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    color: #44197E;
+}
+
+.btnsSection {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: sticky;
+    bottom: 0;
+    background-color: white;
+    padding-right: 80px;
+    width: 1140px;
+
+}

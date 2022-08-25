@@ -1,0 +1,65 @@
+.mainWork {
+    display: flex;
+    flex-direction: row;
+}
+
+.asideContainer {
+    width: 300px;
+}
+
+.step {
+font-family: 'IBM Plex Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 36px;
+font-family: 'IBM Plex Sans';
+color: #44197E;
+margin: 0px;
+}
+
+.title {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 52px;
+    color: #44197E;
+    margin-top: -8px;
+}
+
+.description {
+    color: #44197E;
+
+} 
+
+.formContainer {
+    padding: 40px 290px 0px 82px;
+    max-width: 1140px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 300px;
+}
+
+.navContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: sticky;
+    bottom: 0;
+    background-color: white;
+    padding-right: 80px;
+    width: 1140px;
+}
+
+.buttnsNav {
+    width: 123px;
+    height: 48px;
+    padding: 12px 24px;
+    gap: 10px;
+    border: 1px solid #585360;
+    border-radius: 32px;
+    background: none;
+
+}
