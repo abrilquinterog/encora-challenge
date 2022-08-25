@@ -16,7 +16,6 @@ export const Extras = () => {
     console.log(extrainfo);
     localStorage.setItem('extrainfo',JSON.stringify(extrainfo)); 
     };
-  };
   
      const [extrainfo, setExtraInfo]= useState({
       certification:"",
@@ -159,4 +158,5 @@ export const Extras = () => {
       <Footer />
     </main>
   );
-};
+}
+

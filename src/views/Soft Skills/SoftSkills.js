@@ -138,6 +138,7 @@ export const SoftSkills = () => {
 			<label class={module.checkbox}>Open minded
 				<span class="checkmark"></span>
 			</label>
+			</section>
 
         <div className={module.navContainer}>
           <button className={module.buttnsNav} onClick={handleOnClickBack}>
