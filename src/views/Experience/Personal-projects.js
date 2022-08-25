@@ -3,6 +3,7 @@ import { useState } from "react";
 import { Footer } from "../../components/Footer/Footer";
 import { useNavigate } from "react-router-dom";
 import module from './Personal-projects.module.css';
+import {TipsPersonal} from '../Experience/TipsPersonal'
 
 export const PersonalProjects = () => {
   const navigate = useNavigate();
@@ -66,13 +67,16 @@ export const PersonalProjects = () => {
         }
       };
 
+      const [mostrarComponente, setMostrarComponente] = useState(false);
+
   return (
     <main className={module.mainWork}>
     <section className={module.asideContainer}> <Aside/> </section>
+    {mostrarComponente ? <TipsPersonal /> : null}
     <section className={module.formContainer}>
     <h2 className={module.secondStep}>Step 2</h2>
         <h2 className={module.workExpTittle}>Personal Projects</h2>
-        <button className={module.tips}><i></i>TIPS</button>
+        <button className={module.tips} onClick={() => setMostrarComponente(!mostrarComponente)}><i></i>TIPS</button>
         <form>
             <label>Project Tittle <br/>
             <input onChange={handleChange} name='projectTittle' type="text" placeholder="e.g. Work App"/>
@@ -80,12 +84,12 @@ export const PersonalProjects = () => {
 
             <label>Industry<br/>
             <select onChange={handleChange} name='industry' className={module.selector}>
+                <option value="Select Industry">Select Industry</option>
                 <option value="Raw Materials">Raw Materials</option>
                 <option value="Manufacturing">Manufacturing</option>
                 <option value="Services">Services</option>
                 <option value="Information Services">Information Services</option>
                 <option value="Human Services">Human Services</option>
-                <option value="Select Industry">Select Industry</option>
             </select>
             </label><br/>
         
