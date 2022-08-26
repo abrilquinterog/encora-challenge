@@ -11,6 +11,7 @@ import { WorkExperience } from "./views/Experience/Work-experience"
 import { Results } from "./views/Results/Results";
 import { DownloadResume } from "./views/DownloadResume/DownloadResume";
 
+
 function App() {
   return (
    <Routes>
@@ -24,7 +25,6 @@ function App() {
     <Route path='personal-projects' element= {<PersonalProjects />} />
     <Route path="download-cv" element = {<Results />} />
     <Route path="download-resume" element = {<DownloadResume />} />
-
    </Routes>
   );
 }
