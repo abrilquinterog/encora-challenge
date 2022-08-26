@@ -9,7 +9,8 @@ import { Extras } from './views/Extras/Extras';
 import { PersonalProjects } from "./views/Experience/Personal-projects";
 import { WorkExperience } from "./views/Experience/Work-experience" 
 import { Results } from "./views/Results/Results";
-import { DownloadResume } from './views/DownloadResume/DownloadResume';
+import { DownloadResume } from "./views/DownloadResume/DownloadResume";
+
 
 function App() {
   return (

@@ -1,8 +1,8 @@
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { Aside } from "../../components/Aside/Aside";
 import { Footer } from "../../components/Footer/Footer";
 import module from "./Education.module.css";
-import React, { useState } from "react";
+import { useState } from "react";
 
 export const Education = () => {
   const [education, setEducation] = useState({

@@ -1,3 +1,6 @@
+import {PDFDownloadLink} from "@react-pdf/renderer";
+import { Footer } from "../../components/Footer/Footer";
+import { Results } from "../Results/Results";
 import module from "./DownloadResume.module.css";
 import HandIllustration from '../../assets/Hand Illustration.png';
 import Rectangle1 from '../../assets/Rectangle1.png';
@@ -13,7 +16,7 @@ export const DownloadResume = () => {
 				<img className={module.image} src={HandIllustration} alt="handsIllustration"/>
 				<div className={module.thanks}>
 				<p className={module.description}>Thank you for sharing your experience with us.</p>
-				<button className={module.download}>Download PDF</button>
+				<PDFDownloadLink document={<Results />} fileName='cv-encora.pdf'><button className={module.download}>Download PDF</button></PDFDownloadLink>
 				</div>
 				</div>
 		</div>
@@ -24,6 +27,8 @@ export const DownloadResume = () => {
 				<img className={module.image} src={Rectangle2} alt="illustration"/>
 				<img className={module.image} src={Rectangle3} alt="illustration"/>
 		</div>
+    <Footer />
 			</section>
-		)
+		);
 };
+
