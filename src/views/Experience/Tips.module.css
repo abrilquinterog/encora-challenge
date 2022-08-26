@@ -1,4 +1,4 @@
-.tipsContainer{
+.tipsContainer {
     width: 350px;
     height: 95%;
     background-image: url('../../assets/Background.png');
@@ -6,12 +6,12 @@
     right: 0px;
     top: 0;
     z-index: 1;
-    padding: 30px 50px 0 15px ;
-    border-bottom-left-radius:100px;
+    padding: 30px 50px 0 15px;
+    border-bottom-left-radius: 100px;
     ;
 }
 
-.list{
+.list {
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 400;
@@ -23,7 +23,7 @@
     margin: 10px 0;
 }
 
-.someTips{
+.someTips {
     text-align: justify;
     margin-left: 25px;
     color: rgba(64, 193, 239, 1);

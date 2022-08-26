@@ -20,22 +20,22 @@
 }
 
 .resumeTitle {
-        font-family: 'Montserrat';
-        font-style: normal;
-        font-weight: 700;
-        font-size: 48px;
-        line-height: 52px;
-        color: #44197E;
-        margin: 10px 0px;
-    
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 52px;
+    color: #44197E;
+    margin: 10px 0px;
+
 }
 
-.btnContainer{
+.btnContainer {
     display: flex;
     flex-direction: row;
 }
 
-.thanks{
+.thanks {
     display: flex;
     flex-direction: column;
     justify-content: center;

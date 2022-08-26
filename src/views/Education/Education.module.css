@@ -1,5 +1,5 @@
 .edSection {
-	padding: 40px 290px 50px 82px;
+    padding: 40px 290px 50px 82px;
     width: 1000px;
     max-width: 1140px;
     display: flex;
@@ -30,7 +30,7 @@
 }
 
 .fields {
-	font-family: 'Montserrat';
+    font-family: 'Montserrat';
     font-style: normal;
     font-weight: 700;
     font-size: .875rem;
@@ -41,7 +41,7 @@
 }
 
 .boxInput {
-	width: 100%;
+    width: 100%;
     margin: 0 0 1rem 0;
     gap: .625rem;
     padding: 1rem;
@@ -69,16 +69,16 @@
 }
 
 ::placeholder {
-	width: 410px;
-	height: 20px;
-	letter-spacing: 0em;
-	text-align: left;
-	font-family: 'IBM Plex Sans';
-	font-style: normal;
-	font-weight: 400;
-font-size: 14px;
-line-height: 20px;
-color: #BEBBC4;
+    width: 410px;
+    height: 20px;
+    letter-spacing: 0em;
+    text-align: left;
+    font-family: 'IBM Plex Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #BEBBC4;
 }
 
 .buttons {
@@ -92,7 +92,7 @@ color: #BEBBC4;
 }
 
 .addSchool {
-	width: 205px;
+    width: 205px;
     height: 40px;
     border-radius: 20px;
     border-color: transparent;

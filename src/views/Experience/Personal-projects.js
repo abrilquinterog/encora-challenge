@@ -2,8 +2,8 @@ import { Aside } from "../../components/Aside/Aside";
 import { useState } from "react";
 import { Footer } from "../../components/Footer/Footer";
 import { useNavigate } from "react-router-dom";
-import module from './Personal-projects.module.css';
-import {TipsPersonal} from '../Experience/TipsPersonal'
+import module from "./Personal-projects.module.css";
+import { TipsPersonal } from "../Experience/TipsPersonal";
 
 export const PersonalProjects = () => {
   const navigate = useNavigate();
@@ -15,7 +15,7 @@ export const PersonalProjects = () => {
   const handleOnClickNext = () => {
     navigate("/education");
     console.log(PersonalProjects);
-    localStorage.setItem('personalProjects',JSON.stringify(PersonalProjects)); 
+    localStorage.setItem("personalProjects", JSON.stringify(PersonalProjects));
   };
 
   const [technologies, setTechnologies] = useState([
@@ -70,7 +70,7 @@ export const PersonalProjects = () => {
     }
   };
 
-      const [mostrarComponente, setMostrarComponente] = useState(false);
+  const [mostrarComponente, setMostrarComponente] = useState(false);
 
   return (
     <main className={module.mainWork}>
@@ -163,8 +163,16 @@ export const PersonalProjects = () => {
         </form>
 
         <div className={module.navContainer}>
-        <button className={module.btnNav} onClick={handleOnClickBack}>BACK</button>
-        <button type="submit" className={module.btnNav} onClick={handleOnClickNext}>NEXT</button>
+          <button className={module.btnNav} onClick={handleOnClickBack}>
+            BACK
+          </button>
+          <button
+            type="submit"
+            className={module.btnNav}
+            onClick={handleOnClickNext}
+          >
+            NEXT
+          </button>
         </div>
       </section>
       <Footer />

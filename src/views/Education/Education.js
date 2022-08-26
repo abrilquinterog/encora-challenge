@@ -1,4 +1,4 @@
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { Aside } from "../../components/Aside/Aside";
 import { Footer } from "../../components/Footer/Footer";
 import module from "./Education.module.css";
@@ -17,14 +17,13 @@ export const Education = () => {
     const { name, value } = e.target;
     setEducation({ ...education, [name]: value });
     console.log(education);
-
   };
 
   const navigate = useNavigate();
 
   const handleOnClickNext = () => {
     navigate("/soft-skills");
-    localStorage.setItem('education',JSON.stringify(education));
+    localStorage.setItem("education", JSON.stringify(education));
   };
 
   return (
@@ -117,7 +116,17 @@ export const Education = () => {
           <br />
           <button className={module.addSchool}>ADD SCHOOL</button> <br />
           <section className={module.btnsSection}>
-          <button className={module.buttons}><Link to={'..'} onClick={(e) => {e.preventDefault(); navigate(-1);}}>BACK</Link></button>
+            <button className={module.buttons}>
+              <Link
+                to={".."}
+                onClick={(e) => {
+                  e.preventDefault();
+                  navigate(-1);
+                }}
+              >
+                BACK
+              </Link>
+            </button>
             <button className={module.buttons} onClick={handleOnClickNext}>
               NEXT
             </button>
