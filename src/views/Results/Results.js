@@ -1,69 +1,137 @@
+import { Document, Page, Text, Image, View, StyleSheet } from "@react-pdf/renderer";
+import logo from "../../assets/encora-jobs-logo.png";
+
 export const Results = () => {
+  let info = localStorage.getItem("userInfo");
+  //console.log(info);
+  let infoDestruc = JSON.parse(info);
 
+  let personalProjects = localStorage.getItem("personalProjects");
+  //console.log(personalProjects);
+  let personalProjectsDestr = JSON.parse(personalProjects);
 
-           let info= localStorage.getItem('userInfo');
-           //console.log(info);
-           let infoDestruc = JSON.parse(info);
+  let workExperience = localStorage.getItem("workExperience");
+  //console.log(workExperience);
+  let workExperienceDestr = JSON.parse(workExperience);
 
-           let personalProjects= localStorage.getItem('personalProjects');
-           //console.log(personalProjects);
-           let personalProjectsDestr = JSON.parse(personalProjects);
+  let education = localStorage.getItem("education");
+  //console.log(education);
+  let educationDestr = JSON.parse(education);
 
-           let workExperience= localStorage.getItem('workExperience');
-           //console.log(workExperience);
-           let workExperienceDestr = JSON.parse(workExperience);
+  let extraInformation = localStorage.getItem("extrainfo");
+  //console.log(extraInformation);
+  let extraInformationDestr = JSON.parse(extraInformation);
 
-           let education= localStorage.getItem('education');
-           //console.log(education);
-           let educationDestr = JSON.parse(education);
+  const styles = StyleSheet.create({
+    body: {
+      paddingTop: 35,
+      paddingBottom: 65,
+      paddingHorizontal: 35,
+    },
+    title: {
+      fontSize: 20,
+      textAlign: "left",
+      color: '#2D1154'
+    },
+    subtitle: {
+      fontSize: 16,
+      textAlign: "left",
+      color: '#585360'
+    },
+    text: {
+      margin: 5,
+      fontSize: 12,
+      textAlign: "justify",
+    },
+    image: {
+      width: 100,
+      position: 'absolute',
+      right: 35,
+      top: 35
+    },
+    container: {
+      position: 'absolute',
+      top: 45,
+      left: 35
+    },
+    pageNumber: {
+      position: "absolute",
+      fontSize: 12,
+      bottom: 30,
+      left: 0,
+      right: 0,
+      textAlign: "center",
+      color: "grey",
+    },
+  });
 
-           let softSkills= localStorage.getItem('soft skills');
-           //console.log(softSkills);
-           let softSkillsDestr = JSON.parse(softSkills);
+  return (
+    <Document>
+      <Page style={styles.body}>
+        <Image style={styles.image} src={logo} />
+        <View style={styles.container}>
+        <View >
+        <Text style={styles.title}>
+          {infoDestruc.firstName} {infoDestruc.lastName}
+        </Text>
+        <Text style={styles.subtitle}>{infoDestruc.job}</Text>
+        </View>
 
-           let extraInformation= localStorage.getItem('extrainfo');
-           //console.log(extraInformation);
-           let extraInformationDestr = JSON.parse(extraInformation);
-           
+        <View>
+          <Text style={styles.title}>Summary</Text>
+        <Text style={styles.text}>{infoDestruc.summary}</Text>
+        </View>
+        <View>
+          <Text style={styles.title}>Technical Skills</Text>
+          {workExperienceDestr.stack.map((technology) => {
+            return <Text style={styles.text}>{technology}</Text>;
+          })}
+        </View>
 
-        return (
-            <>
-            <header>
-            </header>
-            <h1>{infoDestruc.firstName} {infoDestruc.lastName}</h1>
-            <p>{infoDestruc.job}</p>
+        <View>
+          <Text style={styles.title}>Work Experience</Text>
+          <Text style={styles.text}>
+            {workExperienceDestr.startYear}-{workExperienceDestr.endYear}
+          </Text>
+          <Text style={styles.text}>
+            {workExperienceDestr.jobTittle} at {workExperienceDestr.company}
+          </Text>
+          <Text style={styles.subtitle}>Technologies</Text>
+          <Text style={styles.text}>{workExperienceDestr.jobDescription}</Text>
+            {workExperienceDestr.stack.map((technology) => {
+              return <Text style={styles.text}> {technology} </Text>;
+            })}
+        </View>
 
-            <h2>{infoDestruc.summary}</h2>
-            <div>
-                {workExperienceDestr.stack.map(technology=>{
-                    return(
-                        <p>{technology}</p>)
-                })}
-            </div><br/>
-
-            <div>
-                <p>{workExperienceDestr.startYear}-{workExperienceDestr.endYear}</p>
-                <p>{workExperienceDestr.jobTittle} at {workExperienceDestr.company}</p>
-                <p>{workExperienceDestr.jobDescription}</p>
-                <div>
-                {workExperienceDestr.stack.map(technology=>{
-                    return(
-                        <span>  {technology} </span>)
-                })}
-            </div><br/>
-            </div>
-
-            <div>
-                <p>{educationDestr.school}</p>
-                <p>{educationDestr.degree} in {educationDestr.study}</p>
-                <p>{educationDestr.start}-{educationDestr.end}</p>
-                <h2>Other Training and Certifications</h2>
-                <p>{extraInformationDestr.certification}</p>
-                <p>{extraInformationDestr.issuingCertification}</p>
-                <p>{extraInformationDestr.issueYear}</p>
-                <p>{extraInformationDestr.expirationYear}</p>
-                <p>{extraInformationDestr.award}</p>
-            </div>
-            </>
-        );
-        }
+        <View>
+          <Text style={styles.title}>Education</Text>
+          <Text style={styles.text}>{educationDestr.school}</Text>
+          <Text style={styles.text}>
+            {educationDestr.degree} in {educationDestr.study}
+          </Text>
+          <Text style={styles.text}>
+            {educationDestr.start}-{educationDestr.end}
+          </Text>
+          <Text style={styles.title}>Other Training and Certifications</Text>
+          <Text style={styles.text}>{extraInformationDestr.certification}</Text>
+          <Text style={styles.text}>
+            {extraInformationDestr.issuingCertification}
+          </Text>
+          <Text style={styles.text}>{extraInformationDestr.issueYear}</Text>
+          <Text style={styles.text}>
+            {extraInformationDestr.expirationYear}
+          </Text>
+          <Text style={styles.text}>{extraInformationDestr.award}</Text>
+        </View>
+        </View>
+        <Text
+          style={styles.pageNumber}
+          render={({ pageNumber, totalPages }) =>
+            `${pageNumber} / ${totalPages}`
+          }
+          fixed
+        />
+      </Page>
+    </Document>
+  );
+}

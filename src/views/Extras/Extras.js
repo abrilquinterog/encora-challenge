@@ -4,6 +4,7 @@ import { Aside } from "../../components/Aside/Aside";
 import { Footer } from "../../components/Footer/Footer";
 import { useState } from "react";
 
+
 export const Extras = () => {
   const navigate = useNavigate();
 
@@ -12,9 +13,9 @@ export const Extras = () => {
   };
 
   const handleOnClickNext = () => {
-    navigate("/download-cv");      
     console.log(extrainfo);
     localStorage.setItem('extrainfo',JSON.stringify(extrainfo)); 
+    navigate("/download-resume"); 
     };
   
      const [extrainfo, setExtraInfo]= useState({
@@ -145,21 +146,7 @@ export const Extras = () => {
           </label>
           <button className={module.addBtn}>ADD AWARD</button>
           <br />
-          <div className={module.navContainer}>
-            <button className={module.btnNav} onClick={handleOnClickBack}>
-              BACK
-            </button>
-            <button className={module.btnNav} onClick={handleOnClickNext}>
-              CREATE RESUME
-            </button>
-          </div>
-        </form>
-      </section>
-      <Footer />
-    </main>
-  );
-}
-
+          
             <div className={module.navContainer}>
               <button className={module.btnNav} onClick={handleOnClickBack}>BACK</button>
               <button type="submit" className={module.btnNav} onClick={handleOnClickNext}>CREATE RESUME</button>
@@ -168,5 +155,5 @@ export const Extras = () => {
             </section>
             <Footer />
             </main>
-         )
+         );
          }
